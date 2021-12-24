@@ -10,6 +10,7 @@ dependencies {
     implementation 'org.apache.commons:commons-text'
     // add library/subproject
     implementation project(':item2builder')
+    implementation project(':item10equals')
 }
 
 application {

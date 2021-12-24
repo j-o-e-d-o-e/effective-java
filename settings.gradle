@@ -10,4 +10,4 @@
 rootProject.name = 'effective-java'
 include('app')
 // add subproject to comma-separated list or new include()-statement
-include('item2builder')
+include('item2builder', 'item10equals')

@@ -1,0 +1,19 @@
+package net.joedoe.app;
+
+import net.joedoe.equals.PhoneNumber;
+
+/**
+ * <strong>Title</strong>: Methods Common to All Objects
+ * <br>
+ * <strong>Items</strong>: 10-14
+ */
+public class Chapter3 {
+    protected static void item10equals() {
+        PhoneNumber num1 = new PhoneNumber(353, 56, 1234);
+        System.out.printf("%s equals %s? %s\n", num1, num1, num1.equals(num1));
+        Object o = new Object();
+        System.out.printf("%s equals %s? %s\n", num1, o, num1.equals(o));
+        PhoneNumber num2 = new PhoneNumber(353, 56, 2345);
+        System.out.printf("%s equals %s? %s\n", num1, num2, num1.equals(num2));
+    }
+}
