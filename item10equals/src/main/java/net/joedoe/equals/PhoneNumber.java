@@ -1,5 +1,7 @@
 package net.joedoe.equals;
 
+import java.util.Objects;
+
 public final class PhoneNumber {
     private final short areaCode, prefix, lineNum;
 
@@ -24,10 +26,15 @@ public final class PhoneNumber {
 
     @Override
     public String toString() {
-        return "PhoneNumber{" +
-                "areaCode=" + areaCode +
-                ", prefix=" + prefix +
-                ", lineNum=" + lineNum +
-                '}';
+        return String.format("%03d-%03d-%04d", areaCode, prefix, lineNum);
+    }
+
+    @Override
+    public int hashCode() {
+//        return Objects.hash(lineNum, prefix, areaCode); // slower (IDE generated)
+        int result = Short.hashCode(areaCode); // faster
+        result = 31 * result + Short.hashCode(prefix);
+        result = 31 * result + Short.hashCode(lineNum);
+        return result;
     }
 }

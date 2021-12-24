@@ -2,6 +2,9 @@ package net.joedoe.app;
 
 import net.joedoe.equals.PhoneNumber;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * <strong>Title</strong>: Methods Common to All Objects
  * <br>
@@ -15,5 +18,12 @@ public class Chapter3 {
         System.out.printf("%s equals %s? %s\n", num1, o, num1.equals(o));
         PhoneNumber num2 = new PhoneNumber(353, 56, 2345);
         System.out.printf("%s equals %s? %s\n", num1, num2, num1.equals(num2));
+    }
+
+    protected static void item11hashcode() {
+        Map<PhoneNumber, String> m = new HashMap<>();
+        m.put(new PhoneNumber(353, 56, 1234), "Joey");
+        PhoneNumber num = new PhoneNumber(353, 56, 1234);
+        System.out.printf("%s belongs to %s\n", num, m.get(num));
     }
 }
