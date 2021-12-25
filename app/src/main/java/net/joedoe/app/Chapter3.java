@@ -2,6 +2,7 @@ package net.joedoe.app;
 
 import net.joedoe.equals.PhoneNumber;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,5 +26,17 @@ public class Chapter3 {
         m.put(new PhoneNumber(353, 56, 1234), "Joey");
         PhoneNumber num = new PhoneNumber(353, 56, 1234);
         System.out.printf("%s belongs to %s\n", num, m.get(num));
+    }
+
+    protected static void item14comparable() {
+        PhoneNumber[] nums = new PhoneNumber[]{
+                new PhoneNumber(353, 56, 1234),
+                new PhoneNumber(131, 66, 1234),
+                new PhoneNumber(353, 66, 1234),
+        };
+        for (PhoneNumber num : nums) System.out.println(num);
+        Arrays.sort(nums);
+        System.out.println("Sorted:");
+        for (PhoneNumber num : nums) System.out.println(num);
     }
 }
