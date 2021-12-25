@@ -11,6 +11,7 @@ dependencies {
     // add library/subproject
     implementation project(':item2builder')
     implementation project(':item10equals')
+    implementation project(':item16immutability')
 }
 
 application {
