@@ -11,8 +11,8 @@ import java.util.Map;
  * <br>
  * <strong>Items</strong>: 10-14
  */
-public class Chapter3 {
-    protected static void item10equals() {
+class Chapter3 {
+    static void item10equals() {
         PhoneNumber num1 = new PhoneNumber(353, 56, 1234);
         System.out.printf("%s equals %s? %s\n", num1, num1, num1.equals(num1));
         Object o = new Object();
@@ -21,14 +21,14 @@ public class Chapter3 {
         System.out.printf("%s equals %s? %s\n", num1, num2, num1.equals(num2));
     }
 
-    protected static void item11hashcode() {
+    static void item11hashcode() {
         Map<PhoneNumber, String> m = new HashMap<>();
         m.put(new PhoneNumber(353, 56, 1234), "Joey");
         PhoneNumber num = new PhoneNumber(353, 56, 1234);
         System.out.printf("%s belongs to %s\n", num, m.get(num));
     }
 
-    protected static void item14comparable() {
+    static void item14comparable() {
         PhoneNumber[] nums = new PhoneNumber[]{
                 new PhoneNumber(353, 56, 1234),
                 new PhoneNumber(131, 66, 1234),

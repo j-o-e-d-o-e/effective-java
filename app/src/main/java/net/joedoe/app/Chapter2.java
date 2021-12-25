@@ -10,8 +10,8 @@ import net.joedoe.builder.pizza.Pizza;
  * <br>
  * <strong>Items</strong>: 1-9
  */
-public class Chapter2 {
-    protected static void item2builder() {
+class Chapter2 {
+    static void item2builder() {
         NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8)
                 .calories(100).sodium(35).carbohydrate(27).build();
         System.out.println(cocaCola);
