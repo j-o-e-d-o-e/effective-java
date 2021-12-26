@@ -6,6 +6,7 @@ public class App {
 //        Chapter3.item10equals();
 //        Chapter3.item11hashcode();
 //        Chapter3.item14comparable();
-        Chapter4.item16immutability();
+//        Chapter4.item16immutability();
+        Chapter4.item18composition();
     }
 }
