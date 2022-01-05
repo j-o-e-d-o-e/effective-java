@@ -13,6 +13,7 @@ dependencies {
     implementation project(':item10equals')
     implementation project(':item16immutability')
     implementation project(':item18composition')
+    implementation project(':item28typesafety')
 }
 
 application {
