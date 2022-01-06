@@ -14,6 +14,7 @@ dependencies {
     implementation project(':item16immutability')
     implementation project(':item18composition')
     implementation project(':item28typesafety')
+    implementation project(':item29generictypes')
 }
 
 application {

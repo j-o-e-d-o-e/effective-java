@@ -8,6 +8,7 @@ public class App {
 //        Chapter3.item14comparable();
 //        Chapter4.item16immutability();
 //        Chapter4.item18composition();
-        Chapter5.item28listsOverArrays();
+//        Chapter5.item28listsOverArrays();
+        Chapter5.item29generictypes();
     }
 }
