@@ -9,6 +9,7 @@ public class App {
 //        Chapter4.item16immutability();
 //        Chapter4.item18composition();
 //        Chapter5.item28listsOverArrays();
-        Chapter5.item29generictypes();
+//        Chapter5.item29generictypes();
+        Chapter5.item30genericmethods();
     }
 }

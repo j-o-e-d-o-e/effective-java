@@ -1,9 +1,11 @@
 package net.joedoe.app;
 
+import net.joedoe.genericmethods.Util;
 import net.joedoe.generictypes.Stack;
 import net.joedoe.typesafety.Chooser;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * <strong>Title</strong>: Generics
@@ -27,5 +29,10 @@ class Chapter5 {
         Stack<Double> stack2 = new Stack<>();
         for (Double d : List.of(Math.E, Math.PI)) stack2.push(d);
         while (!stack2.isEmpty()) System.out.printf("Pop: %.2f\n", stack2.pop());
+    }
+
+    static void item30genericmethods() {
+        Set<String> names = Util.union(Set.of("joe", "doe"), Set.of("joey", "doe"));
+        System.out.println(names);
     }
 }
