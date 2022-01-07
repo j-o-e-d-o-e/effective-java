@@ -3,6 +3,7 @@ package net.joedoe.app;
 import net.joedoe.genericmethods.Util;
 import net.joedoe.generictypes.Stack;
 import net.joedoe.typesafety.Chooser;
+import net.joedoe.typesaftey.container.Favorites;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,5 +44,16 @@ class Chapter5 {
 
         Number num = Util.max(List.of(1, 2, 3));
         System.out.printf("Max: %s", num);
+    }
+
+    static void item33typesafeContainer() {
+        Favorites fav = new Favorites();
+        fav.putFavorite(String.class, "Joe");
+        fav.putFavorite(Integer.class, 0xcafebabe);
+        fav.putFavorite(Class.class, Favorites.class);
+        String favoriteString = fav.getFavorite(String.class);
+        int favoriteInteger = fav.getFavorite(Integer.class);
+        Class<?> favoriteClass = fav.getFavorite(Class.class);
+        System.out.printf("Favorites: %s, %x, %s%n", favoriteString, favoriteInteger, favoriteClass.getName());
     }
 }
