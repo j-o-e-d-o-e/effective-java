@@ -1,6 +1,7 @@
 package net.joedoe.generictypes;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.EmptyStackException;
 
 public class Stack<E> {
@@ -31,6 +32,28 @@ public class Stack<E> {
 
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    /**
+     * <b>Item 31: use bounded wildcards to increase API flexibility</b>
+     * <ul>
+     * <li>parameterized type (`src`) represents a producer, therefore >`<? extends E>`</li>
+     * <li>here: `src` produces `E` instances for use by the Stack</li>
+     * </ul>
+     */
+    public void pushAll(Iterable<? extends E> src) {
+        for (E e : src) push(e);
+    }
+
+    /**
+     * <b>Item 31: use bounded wildcards to increase API flexibility</b>
+     * <ul>
+     * <li>parameterized type (`dst`) represents a consumer, therefore `<? super E>`</li>
+     * <li>here: `dst` consumes `E` instances from the stack</li>
+     * </ul>
+     */
+    public void popAll(Collection<? super E> dst) {
+        while (!isEmpty()) dst.add(pop());
     }
 
     private void ensureCapacity() {
