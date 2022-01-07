@@ -14,18 +14,18 @@ import java.util.Map;
 class Chapter3 {
     static void item10equals() {
         PhoneNumber num1 = new PhoneNumber(353, 56, 1234);
-        System.out.printf("%s equals %s? %s\n", num1, num1, num1.equals(num1));
+        System.out.printf("%s equals %s? %s%n", num1, num1, num1.equals(num1));
         Object o = new Object();
-        System.out.printf("%s equals %s? %s\n", num1, o, num1.equals(o));
+        System.out.printf("%s equals %s? %s%n", num1, o, num1.equals(o));
         PhoneNumber num2 = new PhoneNumber(353, 56, 2345);
-        System.out.printf("%s equals %s? %s\n", num1, num2, num1.equals(num2));
+        System.out.printf("%s equals %s? %s%n", num1, num2, num1.equals(num2));
     }
 
     static void item11hashcode() {
         Map<PhoneNumber, String> m = new HashMap<>();
         m.put(new PhoneNumber(353, 56, 1234), "Joey");
         PhoneNumber num = new PhoneNumber(353, 56, 1234);
-        System.out.printf("%s belongs to %s\n", num, m.get(num));
+        System.out.printf("%s belongs to %s%n", num, m.get(num));
     }
 
     static void item14comparable() {

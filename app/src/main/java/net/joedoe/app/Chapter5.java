@@ -16,22 +16,22 @@ import java.util.Set;
 class Chapter5 {
     static void item28listsOverArrays() {
         Chooser<String> chooser1 = new Chooser<>(List.of("joe", "doe", "mary", "jane"));
-        System.out.printf("Chosen: %s\n", chooser1.choose());
+        System.out.printf("Chosen: %s%n", chooser1.choose());
 
         Chooser<Number> chooser2 = new Chooser<>(List.of(1, 2, 3, 4)); // Item 31
-        System.out.printf("Chosen: %s\n", chooser2.choose());
+        System.out.printf("Chosen: %s%n", chooser2.choose());
     }
 
     static void item29generictypes() {
         Stack<String> stack1 = new Stack<>();
         for (String s : List.of("mary", "jane")) stack1.push(s);
-        while (!stack1.isEmpty()) System.out.printf("Pop: %s\n", stack1.pop().toUpperCase());
+        while (!stack1.isEmpty()) System.out.printf("Pop: %s%n", stack1.pop().toUpperCase());
 
         Stack<Double> stack2 = new Stack<>(); // Item 31
         stack2.pushAll(List.of(Math.E, Math.PI));
         List<Double> list = new ArrayList<>();
         stack2.popAll(list);
-        System.out.printf("Stack empty? %b, List: %s\n", stack2.isEmpty(), list);
+        System.out.printf("Stack empty? %b, List: %s%n", stack2.isEmpty(), list);
     }
 
     static void item30genericmethods() {
