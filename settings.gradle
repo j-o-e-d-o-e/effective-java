@@ -13,4 +13,4 @@ include('app')
 include('item2builder', 'item10equals',)
 include('item16immutability', 'item18composition') // chapter 4
 include('item28typesafety', 'item29generictypes', 'item30genericmethods', 'item33typesafetycontainer') // chapter 5
-include('item34enum', 'item35enumfields') // chapter 6
+include('item34enum', 'item35enumfields', 'item36enumset') // chapter 6

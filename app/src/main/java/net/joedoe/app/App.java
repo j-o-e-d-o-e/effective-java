@@ -17,6 +17,7 @@ public class App {
 //        Chapter5.item33typesafeContainer();
 
 //        Chapter6.item34enums();
-        Chapter6.item35enumsInstanceFields();
+//        Chapter6.item35enumsInstanceFields();
+        Chapter6.item36enumSets();
     }
 }

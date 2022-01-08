@@ -19,6 +19,7 @@ dependencies {
     implementation project(':item33typesafetycontainer')
     implementation project(':item34enum')
     implementation project(':item35enumfields')
+    implementation project(':item36enumset')
 }
 
 application {
