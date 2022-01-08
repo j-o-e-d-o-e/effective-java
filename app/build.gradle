@@ -17,6 +17,7 @@ dependencies {
     implementation project(':item29generictypes')
     implementation project(':item30genericmethods')
     implementation project(':item33typesafetycontainer')
+    implementation project(':item34enum')
 }
 
 application {

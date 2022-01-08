@@ -14,6 +14,8 @@ public class App {
 //        Chapter5.item28listsOverArrays();
 //        Chapter5.item29generictypes();
 //        Chapter5.item30genericmethods();
-        Chapter5.item33typesafeContainer();
+//        Chapter5.item33typesafeContainer();
+
+        Chapter6.item34enums();
     }
 }
