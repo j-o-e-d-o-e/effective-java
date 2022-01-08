@@ -20,6 +20,7 @@ dependencies {
     implementation project(':item34enum')
     implementation project(':item35enumfields')
     implementation project(':item36enumset')
+    implementation project(':item37enummap')
 }
 
 application {
