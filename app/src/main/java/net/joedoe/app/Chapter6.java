@@ -5,6 +5,7 @@ import net.joedoe.enums.Operation;
 import net.joedoe.enums.PayrollDay;
 import net.joedoe.enums.Planet;
 import net.joedoe.immutability.Complex;
+import net.joedoe.instance.fields.Ensemble;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -58,5 +59,11 @@ class Chapter6 {
             default:
                 throw new AssertionError("Unknown op: " + op);
         }
+    }
+
+    static void item35enumsInstanceFields() {
+        for (Ensemble e : Ensemble.values())
+            if (e.numberOfMusicians() == 1) System.out.printf("%d musician is in a %s%n", e.numberOfMusicians(), e);
+            else System.out.printf("%d musicians are in a %s%n", e.numberOfMusicians(), e);
     }
 }
