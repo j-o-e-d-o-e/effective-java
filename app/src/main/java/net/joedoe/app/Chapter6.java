@@ -1,20 +1,15 @@
 package net.joedoe.app;
 
-import net.joedoe.composition.InstrumentedSet;
+import net.joedoe.annotations.v2.exceptions.RunTests2;
 import net.joedoe.enummap.Phase;
 import net.joedoe.enummap.Plant;
 import net.joedoe.enums.Operation;
 import net.joedoe.enums.PayrollDay;
 import net.joedoe.enums.Planet;
 import net.joedoe.enumset.Text;
-import net.joedoe.immutability.Complex;
 import net.joedoe.instance.fields.Ensemble;
 
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
 import java.util.*;
-
-import static net.joedoe.immutability.Complex.*;
 
 /**
  * <strong>Title</strong>: Enums and Annotations
@@ -23,7 +18,7 @@ import static net.joedoe.immutability.Complex.*;
  */
 class Chapter6 {
     /**
-     * use enums instead of int constants
+     * Item 34: Use enums instead of int constants
      */
     static void item34enums() {
         double earthWeight = 80;
@@ -49,7 +44,7 @@ class Chapter6 {
         for (PayrollDay p : PayrollDay.values()) System.out.printf("\t%d€, on %s%n", p.pay(minutesWorked, payRate), p);
     }
 
-    // item34: example for usefulness of switch-statement on client-side
+    // Item34 (example for usefulness of switch-statement on client-side)
     private static Operation inverse(Operation op) {
         switch (op) {
             case PLUS:
@@ -66,7 +61,7 @@ class Chapter6 {
     }
 
     /**
-     * use instance fields instead of ordinals
+     * Item 35: Use instance fields instead of ordinals
      */
     static void item35enumsInstanceFields() {
         for (Ensemble e : Ensemble.values())
@@ -75,14 +70,14 @@ class Chapter6 {
     }
 
     /**
-     * use EnumSet instead of bit fields (client-side)
+     * Item 36: Use EnumSet instead of bit fields (client-side)
      */
     static void item36enumSets() {
         new Text().applyStyles(EnumSet.of(Text.Style.BOLD, Text.Style.UNDERLINE));
     }
 
     /**
-     * use EnumMap instead of ordinal indexing (client-side)
+     * Item 37: Use EnumMap instead of ordinal indexing (client-side)
      */
     static void item37enumMaps() {
         Map<Plant.LifeCycle, Set<Plant>> plantsByLifeCycle = new EnumMap<>(Plant.LifeCycle.class);
@@ -101,6 +96,18 @@ class Chapter6 {
                 Phase.Transition transition = Phase.Transition.from(from, to);
                 System.out.printf("%s: from %s to %s%n", transition, from, to);
             }
+        }
+    }
+
+    /**
+     * Item 39: Prefer annotations to naming patters
+     */
+    static void item39annotations() {
+        try {
+//            RunTests1.main(new String[]{"net.joedoe.annotations.v1.Sample"});
+            RunTests2.main(new String[]{"net.joedoe.annotations.v2.exceptions.Sample"});
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

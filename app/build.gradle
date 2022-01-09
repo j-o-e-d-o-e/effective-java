@@ -21,6 +21,7 @@ dependencies {
     implementation project(':item35enumfields')
     implementation project(':item36enumset')
     implementation project(':item37enummap')
+    implementation project(':item39annotation')
 }
 
 application {
