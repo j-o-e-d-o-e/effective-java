@@ -20,6 +20,8 @@ public class App {
 //        Chapter6.item35enumsInstanceFields();
 //        Chapter6.item36enumSets();
 //        Chapter6.item37enumMaps();
-        Chapter6.item39annotations();
+//        Chapter6.item39annotations();
+
+        Chapter7.item42lambdas();
     }
 }

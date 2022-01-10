@@ -3,9 +3,9 @@ package net.joedoe.app;
 import net.joedoe.annotations.v2.exceptions.RunTests2;
 import net.joedoe.enummap.Phase;
 import net.joedoe.enummap.Plant;
-import net.joedoe.enums.Operation;
 import net.joedoe.enums.PayrollDay;
 import net.joedoe.enums.Planet;
+import net.joedoe.enums.operation.v1.Operation;
 import net.joedoe.enumset.Text;
 import net.joedoe.instance.fields.Ensemble;
 

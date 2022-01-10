@@ -1,40 +1,30 @@
-package net.joedoe.enums;
+package net.joedoe.enums.operation.v2.item42;
 
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.DoubleBinaryOperator;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toMap;
 
+// v2, enhanced as in item 42
 public enum Operation {
-    PLUS("+") {
-        public double apply(double x, double y) {
-            return x + y;
-        }
-    },
-    MINUS("-") {
-        public double apply(double x, double y) {
-            return x - y;
-        }
-    },
-    TIMES("*") {
-        public double apply(double x, double y) {
-            return x * y;
-        }
-    },
-    DIVIDE("/") {
-        public double apply(double x, double y) {
-            return x / y;
-        }
-    };
+    PLUS("+", Double::sum),
+    MINUS("-", (x, y) -> x - y),
+    TIMES("*", (x, y) -> x * y),
+    DIVIDE("/", (x, y) -> x / y);
 
-    public abstract double apply(double x, double y);
+    public double apply(double x, double y) {
+        return op.applyAsDouble(x, y);
+    }
 
     private final String symbol;
+    private final DoubleBinaryOperator op;
     private static final Map<String, Operation> stringToEnum = Stream.of(values()).collect(toMap(Object::toString, e -> e));
 
-    Operation(String symbol) {
+    Operation(String symbol, DoubleBinaryOperator op) {
         this.symbol = symbol;
+        this.op = op;
     }
 
     @Override
