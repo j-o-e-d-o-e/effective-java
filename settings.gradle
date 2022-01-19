@@ -15,3 +15,4 @@ include('item16immutability', 'item18composition')                              
 include('item28typesafety', 'item29generictypes', 'item30genericmethods', 'item33typesafetycontainer')  // chapter 5
 include('item34enum', 'item35enumfields', 'item36enumset', 'item37enummap', 'item39annotation')         // chapter 6
 include('item45stream', 'item48streamparallel')                                                         // chapter 7
+include('item50defensivecopies')

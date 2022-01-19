@@ -24,7 +24,7 @@ dependencies {
     implementation project(':item39annotation')
     implementation project(':item45stream')
     implementation project(':item48streamparallel')
-
+    implementation project(':item50defensivecopies')
 }
 
 application {

@@ -25,5 +25,7 @@ public class App {
 //        Chapter7.item42lambdas();
 //        Chapter7.item45streams();
 //        Chapter7.item48streamsParallel();
+
+        Chapter8.item50defensiveCopies();
     }
 }
