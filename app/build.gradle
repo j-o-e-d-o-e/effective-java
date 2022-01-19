@@ -26,6 +26,7 @@ dependencies {
     implementation project(':item48streamparallel')
     implementation project(':item50defensivecopies')
     implementation project(':item53varargs')
+    implementation project(':item55optional')
 }
 
 application {

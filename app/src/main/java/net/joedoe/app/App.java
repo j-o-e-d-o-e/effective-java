@@ -27,6 +27,7 @@ public class App {
 //        Chapter7.item48streamsParallel();
 
 //        Chapter8.item50defensiveCopies();
-        Chapter8.item53varargs();
+//        Chapter8.item53varargs();
+        Chapter8.item55optionals();
     }
 }
