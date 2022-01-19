@@ -23,6 +23,7 @@ public class App {
 //        Chapter6.item39annotations();
 
 //        Chapter7.item42lambdas();
-        Chapter7.item45streams();
+//        Chapter7.item45streams();
+//        Chapter7.item48streamsParallel();
     }
 }

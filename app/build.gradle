@@ -23,6 +23,8 @@ dependencies {
     implementation project(':item37enummap')
     implementation project(':item39annotation')
     implementation project(':item45stream')
+    implementation project(':item48streamparallel')
+
 }
 
 application {

@@ -3,11 +3,10 @@ package net.joedoe.app;
 import net.joedoe.enums.operation.v2.item42.Operation;
 import net.joedoe.streams.Anagrams;
 import net.joedoe.streams.MersennePrimes;
+import net.joedoe.streams.parallel.PrimeParallel;
 
 import java.io.IOException;
-
-import static java.math.BigInteger.ONE;
-import static java.math.BigInteger.TWO;
+import java.util.Locale;
 
 /**
  * <strong>Title</strong>: Lambdas and Streams
@@ -39,5 +38,26 @@ class Chapter7 {
         }
 
         MersennePrimes.primes().forEach(mp -> System.out.printf("%d: %d%n", mp.bitLength(), mp));
+    }
+
+
+    /**
+     * Item 48: Use caution when making streams parallel
+     */
+    static void item48streamsParallel() {
+        long n = (long) Math.pow(10, 8);
+        long start, count, end;
+
+        start = System.currentTimeMillis();
+        count = PrimeParallel.piParallel(n);
+        end = System.currentTimeMillis();
+        // e.g. Primes less than 100,000,000: 5,761,455 (18,757ms)
+        System.out.printf("Primes less than %,d: %,d (%,dms)%n", n, count, end - start);
+
+        start = System.currentTimeMillis();
+        count = PrimeParallel.pi(n);
+        end = System.currentTimeMillis();
+        // e.g. Primes less than 100,000,000: 5,761,455 (155,895ms)
+        System.out.printf("Primes less than %,d: %,d (%,dms)%n", n, count, end - start);
     }
 }
