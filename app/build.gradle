@@ -29,6 +29,7 @@ dependencies {
     implementation project(':item55optional')
     implementation project(':item59libraries')
     implementation project(':item60decimalnums')
+    implementation project(':item63stringconcatenation')
 }
 
 application {
