@@ -3,8 +3,11 @@ package net.joedoe.app;
 import net.joedoe.concatenation.UtilStringConcat;
 import net.joedoe.decimalnums.UtilDecimal;
 import net.joedoe.libraries.UtilFetch;
+import net.joedoe.reflection.UtilReflection;
+import org.apache.commons.lang3.ArrayUtils;
 
 import java.io.IOException;
+import java.util.Set;
 
 /**
  * <strong>Title</strong>: General Programming
@@ -50,5 +53,21 @@ class Chapter9 {
         res = UtilStringConcat.fixed(numItems);
         end = System.currentTimeMillis();
         System.out.printf("Fixed: \"...%s\" (%,dms)%n", res.substring(res.length() - 4), end - start);
+    }
+
+    /**
+     * Item 65: Prefer interfaces to reflection
+     * (though, "powerful" example for reflection)
+     */
+    static void item65reflection() {
+        String[] items = new String[]{"joe", "doe", "mary", "jane"};
+
+        String className = "java.util.HashSet";
+        Set<String> res = UtilReflection.main(ArrayUtils.addFirst(items, className));
+        System.out.printf("%s: %s%n", className, res);
+
+        className = "java.util.TreeSet";
+        res = UtilReflection.main(ArrayUtils.addFirst(items, className));
+        System.out.printf("%s: %s%n", className, res);
     }
 }

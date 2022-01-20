@@ -30,6 +30,7 @@ dependencies {
     implementation project(':item59libraries')
     implementation project(':item60decimalnums')
     implementation project(':item63stringconcatenation')
+    implementation project(':item65reflection')
 }
 
 application {
