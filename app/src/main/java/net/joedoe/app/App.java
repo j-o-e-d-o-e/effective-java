@@ -30,6 +30,6 @@ public class App {
 //        Chapter8.item53varargs();
 //        Chapter8.item55optionals();
 
-        Chapter9.test();
+        Chapter9.item59libraries();
     }
 }

@@ -16,3 +16,4 @@ include('item28typesafety', 'item29generictypes', 'item30genericmethods', 'item3
 include('item34enum', 'item35enumfields', 'item36enumset', 'item37enummap', 'item39annotation')         // ch.6
 include('item45stream', 'item48streamparallel')                                                         // ch.7
 include('item50defensivecopies', 'item53varargs', 'item55optional')                                     // ch.8
+include('item59libraries')

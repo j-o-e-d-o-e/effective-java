@@ -1,5 +1,9 @@
 package net.joedoe.app;
 
+import net.joedoe.libraries.Util;
+
+import java.io.IOException;
+
 /**
  * <strong>Title</strong>: General Programming
  * <br>
@@ -7,9 +11,14 @@ package net.joedoe.app;
  */
 class Chapter9 {
     /**
-     * Item ...
+     * Item 59: Know and use the libraries
      */
-    static void test() {
-
+    static void item59libraries() {
+        try {
+            String[] args = new String[]{"https://traffic-tracker.herokuapp.com/api/days/current"};
+            Util.main(args);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

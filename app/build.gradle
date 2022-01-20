@@ -27,6 +27,7 @@ dependencies {
     implementation project(':item50defensivecopies')
     implementation project(':item53varargs')
     implementation project(':item55optional')
+    implementation project(':item59libraries')
 }
 
 application {
