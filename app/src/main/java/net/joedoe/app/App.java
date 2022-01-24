@@ -35,5 +35,6 @@ public class App {
 //        Chapter9.item65reflection();
 
         Chapter11.item78syncAccess();
+        Chapter11.item79syncExcessive();
     }
 }

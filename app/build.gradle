@@ -32,7 +32,7 @@ dependencies {
     implementation project(':item63stringconcatenation')
     implementation project(':item65reflection')
     implementation project(':item78syncaccess')
-
+    implementation project(':item79syncexcessive')
 }
 
 application {
