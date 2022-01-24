@@ -31,17 +31,17 @@ class Chapter11 {
      */
     static void item79syncExcessive() {
         ObservableSet<Integer> observableSet = new ObservableSet<>(new HashSet<>());
-        System.out.print("  List size | Added element  \n");
-        System.out.print("-----------------------------\n");
-        observableSet.addObserver((set, element) -> System.out.printf("%11d | %13d%n", set.size(), element));
-        item79xecuteService(observableSet);
+        System.out.print("  List size | Added element | Subscription  \n");
+        System.out.print("--------------------------------------------\n");
+        observableSet.addObserver((set, element) -> System.out.printf("%11d | %13d | %12s%n", set.size(), element, "1st"));
+        item79executeService(observableSet);
         for (int i = 0; i < 100; i++) observableSet.add(i);
     }
 
-    private static void item79xecuteService(ObservableSet<Integer> observableSet) {
+    private static void item79executeService(ObservableSet<Integer> observableSet) {
         observableSet.addObserver(new SetObserver<>() {
             public void added(ObservableSet<Integer> set, Integer element) {
-                System.out.printf("%11d | %13d%n", set.size(), element);
+                System.out.printf("%11d | %13d | %12s%n", set.size(), element, "2nd");
                 if (element == 23) {
                     ExecutorService exec = Executors.newSingleThreadExecutor();
                     try {
