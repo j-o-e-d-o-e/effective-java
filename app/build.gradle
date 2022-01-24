@@ -31,6 +31,8 @@ dependencies {
     implementation project(':item60decimalnums')
     implementation project(':item63stringconcatenation')
     implementation project(':item65reflection')
+    implementation project(':item78syncaccess')
+
 }
 
 application {

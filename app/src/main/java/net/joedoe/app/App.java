@@ -34,6 +34,6 @@ public class App {
 //        Chapter9.item60decimalNums();
 //        Chapter9.item65reflection();
 
-        Chapter10.test();
+        Chapter11.item78syncAccess();
     }
 }
