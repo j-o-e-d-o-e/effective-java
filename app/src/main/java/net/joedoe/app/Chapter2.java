@@ -11,6 +11,9 @@ import net.joedoe.builder.pizza.Pizza;
  * <strong>Items</strong>: 1-9
  */
 class Chapter2 {
+    /**
+     * Item 2: Consider a builder when faced with many constructor parameters
+     */
     static void item2builder() {
         NutritionFacts cocaCola = new NutritionFacts.Builder(240, 8)
                 .calories(100).sodium(35).carbohydrate(27).build();

@@ -1,14 +1,9 @@
 package net.joedoe.app;
 
 import net.joedoe.defensivecopies.Period;
-import net.joedoe.enums.operation.v2.item42.Operation;
 import net.joedoe.optionals.Util;
-import net.joedoe.streams.Anagrams;
-import net.joedoe.streams.MersennePrimes;
-import net.joedoe.streams.parallel.PrimeParallel;
 import net.joedoe.varargs.Varargs;
 
-import java.io.IOException;
 import java.util.*;
 
 /**

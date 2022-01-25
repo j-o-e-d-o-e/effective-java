@@ -17,6 +17,9 @@ import static net.joedoe.immutability.Complex.*;
  * <strong>Items</strong>: 15-25
  */
 class Chapter4 {
+    /**
+     * Item 16: In public classes, use accessor methods, not public fields
+     */
     static void item16immutability() {
         Complex c1 = valueOf(1, 0);
         System.out.printf("%s equals %s? %s%n", c1, ONE, c1.equals(ONE));
@@ -26,6 +29,9 @@ class Chapter4 {
         System.out.printf("%s / %s = %s%n", ONE, I, ONE.dividedBy(I));
     }
 
+    /**
+     * Item 18: Favor composition over inheritance
+     */
     static void item18composition() {
         InstrumentedSet<String> s = new InstrumentedSet<>(new HashSet<>());
         s.addAll(new HashSet<>(List.of("Snap", "Crackle", "Pop")));

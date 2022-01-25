@@ -12,6 +12,9 @@ import java.util.Map;
  * <strong>Items</strong>: 10-14
  */
 class Chapter3 {
+    /**
+     * Item 10: Obey the general contract when overriding equals
+     */
     static void item10equals() {
         PhoneNumber num1 = new PhoneNumber(353, 56, 1234);
         System.out.printf("%s equals %s? %s%n", num1, num1, num1.equals(num1));
@@ -21,6 +24,9 @@ class Chapter3 {
         System.out.printf("%s equals %s? %s%n", num1, num2, num1.equals(num2));
     }
 
+    /**
+     * Item 11: Always override hashCode when you override equals
+     */
     static void item11hashcode() {
         Map<PhoneNumber, String> m = new HashMap<>();
         m.put(new PhoneNumber(353, 56, 1234), "Joey");
@@ -28,6 +34,9 @@ class Chapter3 {
         System.out.printf("%s belongs to %s%n", num, m.get(num));
     }
 
+    /**
+     * Item 14: Consider implementing Comparable
+     */
     static void item14comparable() {
         PhoneNumber[] nums = new PhoneNumber[]{
                 new PhoneNumber(353, 56, 1234),

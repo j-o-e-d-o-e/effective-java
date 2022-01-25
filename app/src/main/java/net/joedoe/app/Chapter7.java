@@ -6,7 +6,6 @@ import net.joedoe.streams.MersennePrimes;
 import net.joedoe.streams.parallel.PrimeParallel;
 
 import java.io.IOException;
-import java.util.Locale;
 
 /**
  * <strong>Title</strong>: Lambdas and Streams
@@ -15,7 +14,8 @@ import java.util.Locale;
  */
 class Chapter7 {
     /**
-     * Item 42: Prefer Lambdas to anonymous classes (using Enum `Operation` (v2) from item 34)
+     * Item 42: Prefer Lambdas to anonymous classes
+     * (using Enum `Operation` (v2) from item 34)
      */
     static void item42lambdas() {
         double op1 = 1.2;

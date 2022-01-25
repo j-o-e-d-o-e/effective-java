@@ -15,6 +15,9 @@ import java.util.Set;
  * <strong>Items</strong>: 26-33
  */
 class Chapter5 {
+    /**
+     * Item 28: Prefer lists to arrays
+     */
     static void item28listsOverArrays() {
         Chooser<String> chooser1 = new Chooser<>(List.of("joe", "doe", "mary", "jane"));
         System.out.printf("Chosen: %s%n", chooser1.choose());
@@ -23,6 +26,9 @@ class Chapter5 {
         System.out.printf("Chosen: %s%n", chooser2.choose());
     }
 
+    /**
+     * Item 29: Favor generic types
+     */
     static void item29generictypes() {
         Stack<String> stack1 = new Stack<>();
         for (String s : List.of("mary", "jane")) stack1.push(s);
@@ -35,6 +41,9 @@ class Chapter5 {
         System.out.printf("Stack empty? %b, List: %s%n", stack2.isEmpty(), list);
     }
 
+    /**
+     * Item 30: Favor generic methods
+     */
     static void item30genericmethods() {
         Set<String> names = Util.union(Set.of("joe", "doe"), Set.of("joey", "doe"));
         System.out.println(names);
@@ -46,6 +55,9 @@ class Chapter5 {
         System.out.printf("Max: %s", num);
     }
 
+    /**
+     * Item 33: Consider typesafe heterogeneous containers
+     */
     static void item33typesafeContainer() {
         Favorites fav = new Favorites();
         fav.putFavorite(String.class, "Joe");
