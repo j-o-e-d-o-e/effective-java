@@ -1,5 +1,6 @@
 package net.joedoe.app;
 
+import net.joedoe.concurrency.utils.UtilConcurrent;
 import net.joedoe.sync.access.StopThread;
 import net.joedoe.sync.excessive.ObservableSet;
 import net.joedoe.sync.excessive.SetObserver;
@@ -8,6 +9,7 @@ import java.util.HashSet;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * <strong>Title</strong>: Concurrency
@@ -54,5 +56,19 @@ class Chapter11 {
                 }
             }
         });
+    }
+
+    /**
+     * Item 81: Prefer concurrency utilities to wait and notify
+     */
+    public static void item81concurrencyUtils() {
+        ExecutorService exec = Executors.newCachedThreadPool();
+        try {
+            long res = UtilConcurrent.time(exec, 3, () -> System.out.println("Count down"));
+            System.out.printf("Time spent: %,d nano secs%n", res);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        exec.shutdown();
     }
 }

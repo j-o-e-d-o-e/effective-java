@@ -33,6 +33,7 @@ dependencies {
     implementation project(':item65reflection')
     implementation project(':item78syncaccess')
     implementation project(':item79syncexcessive')
+    implementation project(':item81utils')
 }
 
 application {

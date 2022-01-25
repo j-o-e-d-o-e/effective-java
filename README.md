@@ -57,6 +57,7 @@ Code snippets from "Effective Java" for some items.
 
 - 78: Synchronize access to shared mutable data
 - 79: Avoid excessive synchronization
+- 81: Prefer concurrency utilities to wait and notify
 
 <hr>
 
