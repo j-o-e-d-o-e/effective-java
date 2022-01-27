@@ -59,6 +59,11 @@ Code snippets from "Effective Java" for some items.
 - 79: Avoid excessive synchronization
 - 81: Prefer concurrency utilities to wait and notify
 
+### Chapter 12: Serialization
+
+- 88: Write readObject methods defensively
+- 90: Consider serialization proxies instead of serialized instances
+
 <hr>
 
 ## Materials

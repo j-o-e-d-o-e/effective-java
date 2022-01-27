@@ -2,7 +2,7 @@ package net.joedoe.app;
 
 public class App {
     public static void main(String[] args) {
-//        Chapter2.item2builder();
+        Chapter2.item2builder();
 
 //        Chapter3.item10equals();
 //        Chapter3.item11hashcode();
@@ -36,6 +36,9 @@ public class App {
 
 //        Chapter11.item78syncAccess();
 //        Chapter11.item79syncExcessive();
-        Chapter11.item81concurrencyUtils();
+//        Chapter11.item81concurrencyUtils();
+
+//        Chapter12.item88readObject();
+//        Chapter12.item90serializeProxy();
     }
 }

@@ -34,6 +34,8 @@ dependencies {
     implementation project(':item78syncaccess')
     implementation project(':item79syncexcessive')
     implementation project(':item81utils')
+    implementation project(':item88readobject')
+    implementation project(':item90serializeproxy')
 }
 
 application {
